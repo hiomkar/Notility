@@ -1,0 +1,20 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  .
+  .
+  .
+  <aside>
+    .
+    .
+    .
+  </aside>
+  <div class="span8">
+    <% if @user.notes.any? %>
+        <h3>Notes (<%= @user.notes.count %>)</h3>
+        <ol class="notes">
+          <%= render @notes %>
+        </ol>
+        <% #will_paginate @notes %>
+    <% end %>
+  </div>
+</div>
