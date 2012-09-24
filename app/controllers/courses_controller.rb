@@ -15,10 +15,15 @@ class CoursesController < ApplicationController
   def show
     @course = Course.find(params[:id])
 
+=begin
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @course }
     end
+=end
+
+
+    @notes = @course.notes
   end
 
   # GET /courses/new

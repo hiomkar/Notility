@@ -2,12 +2,16 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
   def index
-    @notes = Note.all
+    #@notes = Note.all
 
+    @notes = Note.search(params[:search])
+
+=begin
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @notes }
     end
+=end
   end
 
   # GET /notes/1
@@ -78,6 +82,21 @@ class NotesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to notes_url }
       format.json { head :no_content }
+    end
+  end
+end
+
+def search
+  @notes = Note.find_all_by_tag(:all, :conditions => ["lower(tag) like ?", "%" + params[:search].downcase + "%"])
+
+  if params[:search].to_s.size < 1
+    @notes = Note.all()
+    render :partial => 'note', :collection => @notes
+  else
+    if @notes.size > 0
+      render :partial => 'note', :collection => @notes
+    else
+      render :text => "Result not found!", :layout => false
     end
   end
 end
