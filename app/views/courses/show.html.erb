@@ -10,11 +10,6 @@
 <%= link_to 'Back', courses_path %>
 
 <div class="span8">
-  <% if @course.notes.any? %>
-      <h3>Notes (<%= @course.notes.count %>)</h3>
-      <ol class="notes">
-        <%= render @notes %>
-      </ol>
 
-  <% end %>
+        <%= render '/notes/note' %>
 </div>

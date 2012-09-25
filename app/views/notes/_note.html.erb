@@ -1,9 +1,23 @@
-<li>
-  <span class="content"><%= note.content %></span>
-  <span class="content"><%= note.tag %></span>
-  <span class="content"><%= note.user_id %></span>
-  <span class="content"><%= note.course_id %></span>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(note.created_at) %> ago.
-  </span>
-</li>
+<table>
+  <tr>
+    <th>Content</th>
+    <th>User</th>
+    <th>Course</th>
+    <th>Tag</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @notes.each do |note| %>
+      <tr>
+        <td><%= note.content %></td>
+        <td><%= note.user_id %></td>
+        <td><%= note.course_id %></td>
+        <td><%= note.tag %></td>
+        <td><%= link_to 'Show', note %></td>
+        <td><%= link_to 'Edit', edit_note_path(note) %></td>
+        <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+</table>

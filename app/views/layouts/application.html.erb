@@ -10,7 +10,20 @@
   <![endif]-->
 </head>
 <body>
-
+<header class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <%= link_to "Notility", '/static_pages/home.html', id: "logo" %>
+      <nav>
+        <ul class="nav pull-right">
+          <li><%= link_to "Courses",    '/courses' %></li>
+          <li><%= link_to "Notes",    '/notes' %></li>
+          <li><%= link_to "Users", '/users' %></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
 <div class="container">
   <%= yield %>
 </div>
