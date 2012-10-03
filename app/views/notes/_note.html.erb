@@ -1,7 +1,6 @@
-<table>
-  <tr>
+<table class="table table-striped">
+  <tr class="success">
     <th>Content</th>
-    <th>User</th>
     <th>Course</th>
     <th>Tag</th>
     <th></th>
@@ -12,7 +11,6 @@
   <% @notes.each do |note| %>
       <tr>
         <td><%= note.content %></td>
-        <td><%= note.user_id %></td>
         <td><%= note.course_id %></td>
         <td><%= note.tag %></td>
         <td><%= link_to 'Show', note %></td>

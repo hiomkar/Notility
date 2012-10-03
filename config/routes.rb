@@ -9,6 +9,7 @@ Notility::Application.routes.draw do
 
   resources :users
 
+  match 'get_note/:id' => 'notes#get_note'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -60,6 +61,7 @@ Notility::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
    root :to => 'static_pages#home'
+
 
   # See how all your routes lay out with "rake routes"
 

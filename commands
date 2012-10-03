@@ -1,0 +1,64 @@
+    1  history
+    2  cd /c/Omkar/workspace/Notility/
+    3  rails generate jquery:install
+    4  git commit -m "website_submission_1"
+    5  git push -u origin master
+    6  git push -u origin master
+    7  git push heroku master
+    8  heroku run rake db:migrate
+    9  heroku open
+   10  git add .
+   11  git commit -m "website_submission_1"
+   12  git push heroku master
+   13  heroku run rake db:migrate
+   14  git push heroku
+   15  heroku open
+   16  heroku create
+   17  git push heroku master
+   18  heroku ps
+   19  bundle exec rake db:migrate
+   20  bundle exec rake db:migrate
+   21  heroku open
+   22  git add .
+   23  git commit -m "website"
+   24  heroku ps
+   25  rails s
+   26  heroku keys:add
+   27  heroku login
+   28  git init
+   29  git add .
+   30  git commit -m "website01"
+   31  heroku create
+   32  git push heroku master
+   33  git push heroku
+   34  heroku config
+   35  heroku apps
+   36  cd ..
+   37  cd Notility
+   38  heroku apps
+   39  git remote show origin
+   40  git merge
+   41  git
+   42  git merge master
+   43  git merge filling-in-layout
+   44  git remoste show heroku
+   45  git remote show heroku
+   46  heroku
+   47  heroku stack
+   48  heroku apps
+   49  heroku open
+   50  git remote add origin shielded-waters-6002
+   51  git push -u origin master
+   52  heroku open
+   53  git branch website_submission_01
+   54  git checkout website_submission_01
+   55  git commit -am "update heroku"
+   56  git push heroku website_submission_01:master
+   57  heroku run rake db:migrate
+   58  heroku open
+   59  heroku pg:reset
+   60  heroku config
+   61  heroku pg:reset DATABASE_URL
+   62  heroku run rake db:migrate
+   63  history
+   64  history >> commands

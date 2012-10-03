@@ -1,15 +1,20 @@
 <p id="notice"><%= notice %></p>
 
+<p></p>
 <p>
   <b>Name:</b>
   <%= @course.name %>
 </p>
+          <br/>
 
-
-<%= link_to 'Edit', edit_course_path(@course) %> |
-<%= link_to 'Back', courses_path %>
-
-<div class="span8">
-
-        <%= render '/notes/note' %>
+<% if @course.notes.size > 0 %>
+<div class="container-fluid">
+  <%= render '/notes/note' %>
 </div>
+<% end %>
+
+<br/>
+
+
+<%= link_to 'Back', courses_path, :class =>"btn btn-link"  %>
+

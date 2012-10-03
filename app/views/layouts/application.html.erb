@@ -18,7 +18,6 @@
         <ul class="nav pull-right">
           <li><%= link_to "Courses",    '/courses' %></li>
           <li><%= link_to "Notes",    '/notes' %></li>
-          <li><%= link_to "Users", '/users' %></li>
         </ul>
       </nav>
     </div>
@@ -26,6 +25,17 @@
 </header>
 <div class="container">
   <%= yield %>
+
+  <footer class="footer">
+    <small>
+      Copyright 2012 Omkar Ambardekar
+    </small>
+    <nav>
+      <small class="nav pull-right">Website created using help from <a href="http://railstutorial.org/">Rails Tutorial</a>
+        by Michael Hartl</small>
+    </nav>
+  </footer>
+
 </div>
 </body>
 </html>

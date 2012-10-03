@@ -10,7 +10,7 @@ class Note < ActiveRecord::Base
 
   def self.search(search)
     if search
-      where('content LIKE ?', "%#{search}%")
+      where('tag LIKE ?', "%#{search}%")
     else
       scoped
     end

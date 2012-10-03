@@ -1,58 +1,81 @@
 class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
+
+  respond_to :html, :json, :xml
+
+  skip_before_filter  :verify_authenticity_token
+
   def index
     #@notes = Note.all
-
     @notes = Note.search(params[:search])
 
 =begin
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @notes }
+      format.xml { render xml: @notes }
     end
 =end
+
   end
+
+  def get_note
+    @notes = Note.search(params[:id])
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml { render xml: @notes }
+    end
+  end
+
 
   # GET /notes/1
   # GET /notes/1.json
   def show
     @note = Note.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @note }
-    end
+    respond_with @note
   end
 
   # GET /notes/new
   # GET /notes/new.json
   def new
     @note = Note.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @note }
-    end
+    respond_with @note
   end
 
   # GET /notes/1/edit
   def edit
     @note = Note.find(params[:id])
+    respond_with @note
   end
 
   # POST /notes
   # POST /notes.json
+  # POST /notes.xml
+
   def create
     @note = Note.new(params[:note])
+
+=begin
+    curl -H 'Content-Type: application/xml' \
+  -X POST -d '<?xml version="1.0" encoding="UTF-8"?>
+<note>
+  <content>note from api 1</content>
+  <course_id>1</course_id>
+  <tag>api</tag>
+  <user_id>1</user_id>
+</note>' http://localhost:3000/notes
+=end
 
     respond_to do |format|
       if @note.save
         format.html { redirect_to @note, notice: 'Note was successfully created.' }
         format.json { render json: @note, status: :created, location: @note }
+        format.xml { render :xml => @note }
       else
         format.html { render action: "new" }
-        format.json { render json: @note.errors, status: :unprocessable_entity }
+        format.xml { render :xml => "Failed"}
+        flash[:notice] = "Failed to save."
       end
     end
   end
@@ -84,19 +107,6 @@ class NotesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 end
 
-def search
-  @notes = Note.find_all_by_tag(:all, :conditions => ["lower(tag) like ?", "%" + params[:search].downcase + "%"])
-
-  if params[:search].to_s.size < 1
-    @notes = Note.all()
-    render :partial => 'note', :collection => @notes
-  else
-    if @notes.size > 0
-      render :partial => 'note', :collection => @notes
-    else
-      render :text => "Result not found!", :layout => false
-    end
-  end
-end
