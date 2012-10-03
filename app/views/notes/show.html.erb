@@ -7,7 +7,7 @@
 
 <p>
   <b>Course:</b>
-  <%= @note.course_id %>
+  <%= Course.find(@note.course_id).name %>
 </p>
 
 
