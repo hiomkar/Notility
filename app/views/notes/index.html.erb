@@ -3,21 +3,19 @@
 
 <h1>Listing notes</h1>
 
-<br />
+<br/>
 
 <%= form_tag notes_path, :method => 'get', :id => "notes_search", :class => "form-search" do %>
-<p>
-  <%= text_field_tag :search, params[:search], :class =>"span2 search-query" %>
-  <%= submit_tag "Search", :name => nil, :class => "btn" %>
-</p>
-    <div id="notes"><%= render 'note' %></div>
 
+    <p>
+      <%= text_field_tag :search, params[:search], :class =>"span2 search-query" %>
+      <%= submit_tag "Search", :name => nil, :class => "btn" %>
+    </p>
+    <div id="notes"><%= render 'note' %></div>
 
 <% end %>
 
 <br/>
-
-
 
 <%= link_to 'New Note', new_note_path, class: "btn btn-small btn-primary" %>
 

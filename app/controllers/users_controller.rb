@@ -23,7 +23,6 @@ class UsersController < ApplicationController
 =end
 
       @user = User.find(params[:id])
-      #@notes = @user.notes.paginate(page: params[:page])
       @notes = @user.notes
 
   end

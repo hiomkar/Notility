@@ -10,13 +10,10 @@
   <%= Course.find(@note.course_id).name %>
 </p>
 
-
-
 <p>
   <b>Tag:</b>
   <%= @note.tag %>
 </p>
 
-
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<%= link_to 'Back', notes_path %>
+<%= link_to 'Edit', edit_note_path(@note), :class =>"btn btn-link" %> |
+<%= link_to 'Back', notes_path, :class =>"btn btn-link"  %>

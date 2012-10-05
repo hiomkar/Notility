@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120923064847) do
+ActiveRecord::Schema.define(:version => 20120923060623) do
 
   create_table "courses", :force => true do |t|
     t.string   "name"
@@ -30,13 +30,13 @@ ActiveRecord::Schema.define(:version => 20120923064847) do
 
   add_index "notes", ["course_id", "created_at"], :name => "by_course"
   add_index "notes", ["user_id", "created_at"], :name => "by_user"
+  add_index "notes", ["user_id", "created_at"], :name => "index_notes_on_user_id_and_created_at"
 
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "tag"
   end
 
 end

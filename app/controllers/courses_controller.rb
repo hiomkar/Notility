@@ -21,8 +21,6 @@ class CoursesController < ApplicationController
       format.json { render json: @course }
     end
 =end
-
-
     @notes = @course.notes
   end
 

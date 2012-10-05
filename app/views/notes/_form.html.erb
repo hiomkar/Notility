@@ -23,12 +23,12 @@
         <%= f.collection_select :course_id, Course.all, :id, :name, :class => "dropdown-menu", :prompt => "Select a course" %>
       </div>
 
-      <div class="field">
-        <%= hidden_field_tag(:user_id, "1", :name => "note[user_id]") %>
-      </div>
+      <!--<div class="field">
+        <%#= hidden_field_tag(:user_id, "1", :name => "note[hidden]") %>
+      </div>-->
 
       <div class="field">
-        <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+        <%= f.text_area :content, placeholder: "Write a new note..." %>
       </div>
       <%= f.submit "Post", class: "btn btn-large btn-primary" %>
 
