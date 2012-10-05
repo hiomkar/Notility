@@ -57,14 +57,12 @@ class NotesController < ApplicationController
     @note = Note.new(params[:note])
 
 =begin
-    curl -H 'Content-Type: application/xml' \
-  -X POST -d '<?xml version="1.0" encoding="UTF-8"?>
+    $ curl -H 'Content-Type: application/xml'   -X POST -d '<?xml version="1.0" encoding="UTF-8"?>
 <note>
-  <content>note from api 1</content>
-  <course_id>1</course_id>
+  <content>note from api 2</content>
+  <course_id>2</course_id>
   <tag>api</tag>
-  <user_id>1</user_id>
-</note>' http://localhost:3000/notes
+</note> http://notility.herokuapp.com/notes
 =end
 
     respond_to do |format|
