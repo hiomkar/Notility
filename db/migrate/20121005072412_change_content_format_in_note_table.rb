@@ -1,5 +1,5 @@
 class ChangeContentFormatInNoteTable < ActiveRecord::Migration
   def change
-    change_column :note, :content, :longtext
+    change_column :notes, :content, :longtext
   end
 end
