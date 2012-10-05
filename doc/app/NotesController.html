@@ -127,10 +127,6 @@
   
     <li><a href="./StaticPagesHelper.html">StaticPagesHelper</a>
   
-    <li><a href="./UsersController.html">UsersController</a>
-  
-    <li><a href="./UsersHelper.html">UsersHelper</a>
-  
   </ul>
 </nav>
 
@@ -182,14 +178,12 @@
   <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
     <span class="ruby-ivar">@note</span> = <span class="ruby-constant">Note</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:note</span>])
 
-<span class="ruby-comment">    curl -H 'Content-Type: application/xml' \
-  -X POST -d '&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<span class="ruby-comment">    $ curl -H 'Content-Type: application/xml'   -X POST -d '&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;note&gt;
-  &lt;content&gt;note from api 1&lt;/content&gt;
-  &lt;course_id&gt;1&lt;/course_id&gt;
+  &lt;content&gt;note from api 2&lt;/content&gt;
+  &lt;course_id&gt;2&lt;/course_id&gt;
   &lt;tag&gt;api&lt;/tag&gt;
-  &lt;user_id&gt;1&lt;/user_id&gt;
-&lt;/note&gt;' http://localhost:3000/notes
+&lt;/note&gt; http://notility.herokuapp.com/notes
 </span>
     <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
       <span class="ruby-keyword">if</span> <span class="ruby-ivar">@note</span>.<span class="ruby-identifier">save</span>
@@ -229,7 +223,7 @@
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/notes_controller.rb, line 101</span>
+            <pre><span class="ruby-comment"># File app/controllers/notes_controller.rb, line 99</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
   <span class="ruby-ivar">@note</span> = <span class="ruby-constant">Note</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
   <span class="ruby-ivar">@note</span>.<span class="ruby-identifier">destroy</span>
@@ -430,7 +424,7 @@
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/notes_controller.rb, line 85</span>
+            <pre><span class="ruby-comment"># File app/controllers/notes_controller.rb, line 83</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
   <span class="ruby-ivar">@note</span> = <span class="ruby-constant">Note</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
 
