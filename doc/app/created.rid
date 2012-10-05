@@ -1,0 +1,14 @@
+Fri, 05 Oct 2012 02:31:35 -0400
+doc/README_FOR_APP	Thu, 20 Sep 2012 17:28:39 -0400
+app/controllers/application_controller.rb	Thu, 20 Sep 2012 17:28:38 -0400
+app/controllers/courses_controller.rb	Fri, 05 Oct 2012 01:54:34 -0400
+app/controllers/notes_controller.rb	Wed, 03 Oct 2012 01:51:54 -0400
+app/controllers/static_pages_controller.rb	Wed, 03 Oct 2012 01:51:54 -0400
+app/controllers/users_controller.rb	Fri, 05 Oct 2012 01:55:41 -0400
+app/helpers/application_helper.rb	Thu, 20 Sep 2012 17:28:38 -0400
+app/helpers/courses_helper.rb	Thu, 20 Sep 2012 21:49:24 -0400
+app/helpers/notes_helper.rb	Thu, 20 Sep 2012 21:57:22 -0400
+app/helpers/static_pages_helper.rb	Wed, 03 Oct 2012 01:51:54 -0400
+app/helpers/users_helper.rb	Thu, 20 Sep 2012 18:43:06 -0400
+app/models/course.rb	Thu, 04 Oct 2012 09:47:39 -0400
+app/models/note.rb	Fri, 05 Oct 2012 01:56:18 -0400
