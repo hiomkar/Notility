@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1c3a5dac-5285-463e-88f2-356c2f7faacb" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20121005072412_change_content_format_in_note_table.rb" afterPath="$PROJECT_DIR$/db/migrate/20121005072412_change_content_format_in_note_table.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="Notility.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -101,7 +100,7 @@
       <file leaf-file-name="20121005072412_change_content_format_in_note_table.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/migrate/20121005072412_change_content_format_in_note_table.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="21" selection-start="97" selection-end="97" vertical-scroll-proportion="0.09264305">
+            <state line="2" column="37" selection-start="113" selection-end="113" vertical-scroll-proportion="0.09264305">
               <folding />
             </state>
           </provider>
@@ -848,7 +847,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20121005072412_change_content_format_in_note_table.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="21" selection-start="97" selection-end="97" vertical-scroll-proportion="0.09264305">
+        <state line="2" column="37" selection-start="113" selection-end="113" vertical-scroll-proportion="0.09264305">
           <folding />
         </state>
       </provider>
