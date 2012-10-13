@@ -1,2 +1,36 @@
 Use this README file to introduce your application and point to useful places in the API for learning more.
 Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+
+Welcome to Notility
+This is a simple lecture notes sharing website.
+This is a single user website as of now.
+A user can create courses and notes.
+Notes are always associated with courses.
+
+Following are the website implementation details based on the assessment rubric:
+1.	Create at least two controllers and two models that are related to each other. (i.e. there is foreign key or join table between the two.)
+    a.	Courses and Notes are linked together.
+    b.	One course has many notes.
+2.	Use migrations to incrementally build your database. Because you are working by yourself, it is tempting to just use on migration file and keep altering it until it is "perfect." Instead, use multiple migrations just as if you were on a team of developers.
+    a.	Migration files are incremental in nature.
+    b.	Adding indexes, changing column types, has been incrementally implemented.
+3.	Write unit, functional, and integration tests for the more interesting parts of your system. We don't expect 100% code coverage.
+    a.	Integration test checks if homepage has right title content.
+    b.	Functional test checks if notes are displayed in right order and that dependencies between courses and notes are handled correctly.
+    c.  Unit test check if model count increases on creation of objects.
+    d.	Tests for dependency checks - if a course has 3 notes and the course is deleted then all 3 notes are deleted along with it.
+4.	Have one AJAX operation.
+    a.	An AJAX operation helps search through notes based on their “tags”. Go to http://notility.herokuapp.com/notes and type a tag keyword in the search box.
+5.	Have one REST API and be able to test it with an XML request
+    a.	Request API: in order to create a note through API, following curl command can be used:
+        i.	$ curl -H 'Content-Type: application/xml'   -X POST -d '<?xml version="1.0" encoding="UTF-8"?>
+                <note>
+                  <content>note from api 2</content>
+                  <course_id>2</course_id>
+                  <tag>api</tag>
+                </note> http://notility.herokuapp.com/notes
+    b.	Response API: in order to search for a note based on tag keywords through API, following URL can be hit:
+        i.	http://notility.herokuapp.com/get_note/ise.xml (where “ise” is the tag keyword and “.xml” is the format - /get_note/<tag>.<format>)
+
+The updated GIT repository for this website is https://github.com/hiomkar/Notility.git
+

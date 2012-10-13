@@ -23,14 +23,16 @@ end
 
 gem 'jquery-rails', '2.0.2'
 
-gem 'rspec-rails'
+
 
 gem 'annotate', '2.5.0', group: :development
 
 
 group :test do
+  gem 'rspec-rails'
   gem 'capybara', '1.1.2'
   gem 'factory_girl_rails', '4.1.0'
+  gem 'assert_difference'
 end
 
 group :production do
